@@ -5,10 +5,12 @@ import {
 } from "react-router-dom";
 import Home from "./routes/Home";
 import Detail from "./routes/Detail";
+import { Reset } from 'styled-reset';
 
 function App() {
   return (
     <Router>
+      <Reset />
       <Switch>
         <Route path="/hello">
           <h1>hello</h1>
