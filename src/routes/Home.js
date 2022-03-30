@@ -25,14 +25,16 @@ function Home() {
     ) : (
       <div>
         <h1 className={styles.title}>The Most Downloaded Movies</h1>
-        {movies.map((movie) =>
-          <Movie
-            key={movie.id}
-            id={movie.id}
-            coverImg={movie.medium_cover_image}
-            title={movie.title}
-            summary={movie.summary}
-            genres={movie.genres} />)}
+        <div className={styles.movies}>
+          {movies.map((movie) =>
+            <Movie
+              key={movie.id}
+              id={movie.id}
+              coverImg={movie.medium_cover_image}
+              title={movie.title}
+              summary={movie.summary}
+              genres={movie.genres} />)}
+        </div>
       </div>
     )}
     </div>

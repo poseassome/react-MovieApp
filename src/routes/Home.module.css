@@ -3,6 +3,9 @@
 .title{
   text-align: center;
   font-family: 'Permanent Marker', cursive;
+  font-size: 3rem;
+  margin: 20px 0 50px;
+  color: #fff;
 }
 
 .loader {
@@ -13,4 +16,12 @@
   align-items: center;
   font-weight: 300;
   font-family: 'Permanent Marker', cursive;
+}
+
+.movies {
+  margin: 0 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 30px;
+  column-gap: 50px;
 }
