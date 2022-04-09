@@ -21,7 +21,7 @@ function Home() {
 
   return (
     <div>{loading ? (
-      <h1 className={styles.loader}>Loading...</h1>
+      <h1 className={styles.loader}>Loading . . .</h1>
     ) : (
       <div>
         <h1 className={styles.title}>The Most Downloaded Movies</h1>

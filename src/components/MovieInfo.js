@@ -1,18 +1,23 @@
 import PropTypes from "prop-types";
+import styles from "./MovieInfo.module.css";
 
 function MovieInfo({ coverImg, title, summary, genres, year, runtime, download_count, like_count }) {
   return (
-    <div>
-      <img src={coverImg} alt={title} />
-      <h2>{title} ({year})</h2>
-      <ul>
-        {genres.map((g) => (
-          <li key={g}>{g}</li>
-        ))}
-      </ul>
-      <p>{runtime} min</p>
-      <p>{summary}</p>
-      <p>{download_count} {like_count}</p>
+    <div style={{ backdropFilter: "blur(10px)", height: "100%", position: "relative" }}>
+      <div className={styles.background}>
+        <img src={coverImg} alt={title} className={styles.img} />
+        <div className={styles.desc}>
+          <h2 className={styles.movieName}>{title} ({year})</h2>
+          <ul className={styles.genresWrap}>
+            {genres.map((g) => (
+              <li key={g} className={styles.genres}>{g}</li>
+            ))}
+          </ul>
+          <p className={styles.runtime}>{runtime} min</p>
+          <p className={styles.summary}>{summary}</p>
+          <p className={styles.like}>★ Download : {download_count}  | ♥︎ Like : {like_count}</p>
+        </div>
+      </div>
     </div>
   )
 }

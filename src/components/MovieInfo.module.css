@@ -1,21 +1,25 @@
-.movie {
-  display: flex;
-  background-color: #fff;
+.background {
+  background: #fff;
+  width: 80%;
+  height: 70%;
+  margin: 100px 0;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0px 0px 10px 5px #999;
 }
 
 .img {
-  height: 300px;
+  height: 100%;
 }
 
 .desc {
   padding: 20px;
-}
-
-.mName {
-  margin-bottom: 10px;
+  width: 100%;
+  height: 100%;
 }
 
 .movieName {
@@ -23,15 +27,12 @@
   font-weight: 700;
   text-decoration: none;
   font-size: 1.75rem;
-}
-
-.movieName:hover {
-  color: red;
+  margin-bottom: 20px;
 }
 
 .genresWrap {
   height: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .genres {
@@ -46,9 +47,18 @@
   margin-right: 0;
 }
 
+.runtime {
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+}
+
 .summary {
   clear: both;
   text-indent: 10px;
   line-height: 1.5rem;
-  height: 100%;
+  margin-bottom: 30px;
+}
+
+.like {
+  text-align: center;
 }

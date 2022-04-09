@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import MovieInfo from '../components/MovieInfo';
+import styles from './Detail.module.css';
 
 function Detail() {
   const [loading, setLoading] = useState(true);
@@ -18,11 +19,19 @@ function Detail() {
     getMovie();
   });
 
+  const backgroundStyle = {
+    backgroundImage: `url(${movie.medium_cover_image})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    height: "100vh",
+  }
+
   return (
     <div>{loading ? (
-      <h1>Loading...</h1>
+      <h1 className={styles.loader}>Loading . . .</h1>
     ) : (
-      <div>
+      <div style={backgroundStyle}>
         <MovieInfo
           coverImg={movie.medium_cover_image}
           title={movie.title}
